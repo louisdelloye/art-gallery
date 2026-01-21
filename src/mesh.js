@@ -44,7 +44,7 @@ module.exports = (regl, data, useReflexion) => {
             float alpha = 1.0;
             if (v_normal.y > 0.0) {
                 // Floor: keep it mostly opaque so it reads matte (less reflection)
-                alpha = 0.999; // raise toward 1.0 for less reflection; try 0.95 if still shiny
+                alpha = 0.995; // raise toward 1.0 for less reflection; try 0.95 if still shiny
             }
             gl_FragColor = vec4(totalLight, alpha);
         }`,
